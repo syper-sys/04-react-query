@@ -12,8 +12,10 @@ function SearchBar({ onSubmit }: SearchBarProps) {
       toast.error("Please enter a search query.");
       return;
     }
+
     onSubmit(query.trim());
   };
+
   return (
     <header className={css.header}>
       {" "}
