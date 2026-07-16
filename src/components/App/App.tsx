@@ -16,7 +16,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
 
-  const { data, isLoading, isError, isSuccess, isFetching } = useQuery({
+  const { data, isError, isSuccess, isFetching } = useQuery({
     queryKey: ["movies", searchQuery, currentPage],
     queryFn: () => fetchMoviesByQuery(searchQuery, currentPage),
     enabled: searchQuery !== "",
